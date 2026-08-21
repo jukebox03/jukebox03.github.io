@@ -83,7 +83,7 @@ cv:
     Skills:
       - name: Languages
         icon: fa-solid fa-code
-        keywords: "C/C++, Python, Java, OCaml, Go, SQL"
+        keywords: "C/C++, Python, Java, OCaml, Go, Rust, SQL"
       - name: Systems & Networking
         icon: fa-solid fa-network-wired
         keywords: "Linux System Programming, k8s, Service Mesh (Istio, Envoy, Linkerd), DPU (BlueField-3), DMA"
