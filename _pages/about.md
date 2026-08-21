@@ -28,3 +28,7 @@ latest_posts:
 ---
 
 Computer Science student focusing on systems programming and network infrastructure. Have gained practical understanding by contributing to DPU-accelerated service mesh research and building a custom x86-64 compiler. Motivated by the challenge of solving low-level hardware-software bottlenecks and further expanding my knowledge in distributed systems.
+
+Currently a Research Intern at the TNET lab at Seoul National University, working on the DPUmesh project. My interests are high-performance networking and system programming.
+
+See [projects](/projects/) for what I have been building, or my [CV](/cv/) for the full record.
