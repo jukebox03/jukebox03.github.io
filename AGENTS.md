@@ -23,6 +23,14 @@ Build locally with a plain `bundle exec jekyll build` — never pass `--baseurl`
 | GitHub cards on `/repositories/` | `_data/repositories.yml` |
 | Publications | `_bibliography/papers.bib` — the tab is currently `nav: false` in `_pages/publications.md` |
 
+Upstream's demo pages (people, teaching, bookshelf, submenus, plugins, blog) and the demo `_posts`, `_teachings`, `_books`, and bibliography entries were **deleted**, not hidden. Restore any of them from git history if wanted.
+
+## `nav: false` hides a tab; it does not remove the page
+
+A page with `nav: false` still builds and is still served at its permalink, and search engines can still index it. To actually retire a page, delete the file.
+
+Deleting a page is also not always safe on its own: `_pages/profiles.md` named `about_einstein.md` in its front matter, and the gem's `profiles.liquid` layout `include`s that file by name. Deleting only `about_einstein.md` broke the build with `Could not locate the included file`. **After deleting any content file, grep the repo for its basename** — front matter in one page can reference a file in another.
+
 ## This is a thin starter, not a theme
 
 Layouts, includes, Sass, and JavaScript live in the `al_folio_*` **gems**, not in this repo. There is deliberately no `_layouts/`, `_includes/`, or `_sass/` directory here.
