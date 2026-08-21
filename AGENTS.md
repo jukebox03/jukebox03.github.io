@@ -25,6 +25,12 @@ Build locally with a plain `bundle exec jekyll build` — never pass `--baseurl`
 
 Upstream's demo pages (people, teaching, bookshelf, submenus, plugins, blog) and the demo `_posts`, `_teachings`, `_books`, and bibliography entries were **deleted**, not hidden. Restore any of them from git history if wanted.
 
+## The projects page filters by category
+
+`site.enable_project_categories` is **on by gem default** — it is not in `_config.yml`. When `_pages/projects.md` also carries `display_categories`, the page renders one section per listed category and shows only projects whose `category:` matches. A mismatch renders empty category headings and no cards, with no error.
+
+`display_categories` is currently removed from `_pages/projects.md`, so all projects render in one grid ordered by `importance:`. If you add it back, every value must match a `category:` used in `_projects/*.md`.
+
 ## `nav: false` hides a tab; it does not remove the page
 
 A page with `nav: false` still builds and is still served at its permalink, and search engines can still index it. To actually retire a page, delete the file.

@@ -1,14 +1,15 @@
 cv:
   name: Junseop Byun
-  label: Undergraduate Researcher — Systems & Networking
+  label: Research Intern, TNET Lab
   email: jukebox@snu.ac.kr
   location: Seoul, Republic of Korea
   image: ""
   summary: >-
-    Computer Science undergraduate at Seoul National University working on high-performance
-    networking and systems programming. Currently researching DPU-accelerated service meshes
-    at the TNET Lab; previously built an x86-64 compiler end to end. Interested in distributed
-    systems and the hardware-software boundary where clean abstractions turn out to cost real cycles.
+    Computer Science student focusing on systems programming and network infrastructure.
+    Have gained practical understanding by contributing to DPU-accelerated service mesh
+    research and building a custom x86-64 compiler. Motivated by the challenge of solving
+    low-level hardware-software bottlenecks and further expanding my knowledge in
+    distributed systems.
 
   social_networks:
     - network: GitHub
@@ -16,89 +17,77 @@ cv:
 
   sections:
     Education:
-      - institution: Seoul National University
+      - institution: Seoul National University (SNU)
         location: Seoul, Republic of Korea
         url: https://cse.snu.ac.kr/en
         area: Computer Science and Engineering
         studyType: B.S.
         start_date: 2022-03
         end_date: 2027-08
-        score: "GPA 3.95 / 4.30"
-        courses: "Computer Networks, System Programming, Computer Architecture, Quantum Computing, Theoretical Physics"
+        score: "GPA: 3.95/4.30"
+        courses: "Computer Network, System Programming, Computer Architecture, Quantum Computing, Theoretical Physics"
         highlights:
-          - Expected graduation August 2027.
-          - Focus on high-performance networking and system programming.
+          - "March 2022 - August 2027 (Expected)"
+          - "Interests: High-Performance Networking, System Programming"
 
-      - institution: Seoul Science High School
+      - institution: Seoul Science High School (SSHS)
         location: Seoul, Republic of Korea
-        area: Science
-        studyType: Diploma
         start_date: 2019-03
         end_date: 2022-02
-        score: "GPA 4.18 / 4.30"
+        score: "GPA: 4.18/4.30"
 
     Experience:
-      - company: TNET Lab, Seoul National University
+      - company: TNET lab
         position: Research Intern
-        location: Seoul, Republic of Korea
+        location: Seoul National University
         start_date: 2025-12
         end_date: present
-        summary: >-
-          DPUmesh — a service mesh that offloads sidecar proxying onto a NVIDIA BlueField-3 DPU,
-          so that microservice communication stops competing with the application for host CPU.
+        summary: "DPUmesh Project"
         highlights:
-          - Researching and optimizing service mesh architectures on Data Processing Units to reduce host CPU overhead.
-          - Integrated the DPUmesh architecture directly into the Apache Thrift RPC framework, so existing services adopt the offloaded data path with zero modifications to user code.
-          - Benchmarked sidecar proxy overhead with DeathStarBench, exercising realistic multi-hop microservice call graphs.
-          - Diagnosed and resolved severe Consul service-registry leaks that were stalling CPU and exhausting connections under sustained load.
+          - "**DPU-Accelerated Service Mesh:** Researching and optimizing service mesh architectures using Data Processing Units (DPU) to reduce CPU overhead."
+          - "**Transparent Framework Integration:** Integrated the DPUmesh architecture directly into the gRPC framework, enabling existing applications to leverage the new service mesh with zero modifications to user code."
+          - "**Sidecar Benchmarking & System Debugging:** Benchmarked proxy overhead via DeathStarBench and resolved severe Consul registry leaks causing CPU and connection stalls."
 
     Projects:
-      - name: SNUPL/2 Compiler
-        summary: >-
-          A complete compiler for SNUPL/2, a small imperative language, written from scratch in C —
-          no lex, no yacc, no LLVM.
+      - name: SNUPL2 Compiler
+        summary: Developer
         start_date: 2023-09
         end_date: 2023-12
         highlights:
-          - Built the full pipeline: hand-written lexer, recursive-descent parser, AST construction, and semantic analysis with scope and type checking.
-          - Implemented the backend to emit x86-64 assembly directly, handling register allocation and stack frame layout by hand.
+          - Developed a full-stack compiler for SNUPL/2, a custom educational programming language, completely from scratch using C.
+          - Managed the end-to-end compilation pipeline, including lexical analysis, parsing, Abstract Syntax Tree (AST) construction, and semantic analysis.
+          - Implemented the compiler backend to generate x86-64 assembly code, directly handling low-level register allocation.
 
       - name: MomenTag
-        summary: >-
-          A tag-based photo management application organized around tags rather than folders,
-          built full-stack from scratch.
+        summary: Full-Stack Developer
         start_date: 2025-09
         end_date: 2025-12
         highlights:
-          - Designed and implemented a RESTful backend in Django, covering the data model, authentication, and tag query endpoints.
-          - Built a native Android client in Kotlin with Jetpack Compose against that API.
+          - Built a tag-based photo management application from scratch.
+          - Designed and integrated a RESTful backend using Django with a modern Android frontend using Jetpack Compose.
 
     Awards:
-      - title: Second Prize, Graduation Research Paper Presentation Contest (Physics)
-        awarder: Seoul Science High School
+      - title: Second prize - Graduation Research Paper Presentation Contest (Physics, SSHS)
         date: 2021
-      - title: Participant, 33rd Final Korean Mathematical Olympiad (FKMO)
-        awarder: Korean Mathematical Society
+      - title: Participant - 33rd Final Korean Mathematical Olympiad (FKMO)
         date: 2019
 
     Skills:
       - name: Languages
         icon: fa-solid fa-code
-        keywords: "C, C++, Python, Java, OCaml, Go, SQL"
+        keywords: "C/C++, Python, Java, OCaml, Go, SQL"
       - name: Systems & Networking
         icon: fa-solid fa-network-wired
-        keywords: "Linux system programming, Kubernetes, service mesh (Istio, Envoy), DPU (BlueField-3), DMA, RPC frameworks"
+        keywords: "Linux System Programming, k8s, Service Mesh (Istio, Envoy), DPU (BlueField-3), DMA"
       - name: Tools & Frameworks
         icon: fa-solid fa-screwdriver-wrench
         keywords: "DOCA, Git, Qiskit, Django, Jetpack Compose"
 
     Languages:
       - name: Korean
-        summary: "Native speaker"
       - name: English
-        summary: "Professional working proficiency"
 
     Interests:
-      - name: Physics
+      - name: Physics Studies
         icon: fa-solid fa-atom
-        keywords: "Classical Mechanics, Electrodynamics, Quantum Information; graduate-level coursework in Quantum Mechanics"
+        keywords: "Studied Classical Mechanics, Electrodynamics, and Quantum Information. Completed graduate-level coursework in Quantum Mechanics."

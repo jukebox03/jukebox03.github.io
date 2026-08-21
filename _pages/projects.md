@@ -2,10 +2,9 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Research and systems work — service mesh offload, compilers, and full-stack builds.
+description: DPU-accelerated service mesh research, a custom x86-64 compiler, and full-stack application development.
 nav: true
 nav_order: 1
-display_categories: [work, fun]
 horizontal: false
 ---
 

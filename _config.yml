@@ -9,9 +9,9 @@ last_name: Byun
 contact_note: >
   Email is the fastest way to reach me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Undergraduate researcher at Seoul National University working on high-performance
-  networking and systems programming — DPU-accelerated service meshes, kernel-bypass
-  data paths, and compilers.
+  Computer Science student at Seoul National University focusing on systems programming
+  and network infrastructure. Research Intern at TNET lab working on DPU-accelerated
+  service mesh.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
