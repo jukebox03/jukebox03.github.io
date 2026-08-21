@@ -25,6 +25,16 @@ Build locally with a plain `bundle exec jekyll build` — never pass `--baseurl`
 
 Upstream's demo pages (people, teaching, bookshelf, submenus, plugins, blog) and the demo `_posts`, `_teachings`, `_books`, and bibliography entries were **deleted**, not hidden. Restore any of them from git history if wanted.
 
+## Local overrides in use
+
+- **`_layouts/cv.liquid`** — a copy of the gem's layout plus one `<style>` rule. The gem wraps each CV entry in `<ul class="list-group">`, and this site runs Tailwind with `preflight: false`, so the browser's default disc marker showed next to every date badge. Bootstrap would normally strip it; `bootstrap-compat.css` does not cover `.list-group`. Re-check with `bundle exec al-folio upgrade overrides diff _layouts/cv.liquid` after a gem upgrade.
+
+`_pages/cv.md` cannot carry that CSS: `cv.liquid` never renders `{{ content }}`, so anything in the page body is silently dropped.
+
+## The GitHub stats card is deliberately off
+
+`_data/repositories.yml` leaves `github_users` empty. Filling it renders a github-stats-extended card that assigns the account a letter rank (this account scored B-) from commit, PR, and star counts. It measures GitHub activity volume, not the work the site is about, and it is served by a free Vercel instance — the sibling trophy service in `_config.yml` is already disabled because it answers HTTP 402. `github_repos` stays, since the repo cards describe actual projects.
+
 ## Never use `|` as a separator in Markdown body text
 
 `_config.yml` sets `kramdown.input: GFM`, and a body line containing pipes is parsed as a **table**. `Research Intern | TNET lab | December 2025 - Present` silently became a four-column table with a rule above it — no error, just a wrecked layout. The site uses `·` for these separator lines instead.

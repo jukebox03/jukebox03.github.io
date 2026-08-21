@@ -1,5 +1,6 @@
+# `github_users` renders a github-stats-extended card that grades the account
+# (commits, PRs, stars) with a letter rank. Left empty on purpose -- see AGENTS.md.
 github_users:
-  - jukebox03
 
 repo_description_lines_max: 2
 
