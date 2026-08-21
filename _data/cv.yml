@@ -39,7 +39,8 @@ cv:
           - "**GPA:** 4.18/4.30"
 
     Military Service:
-      - bullet: "Republic of Korea Army, 8th Division | K21 IFV Gunner | January 2024 - July 2025"
+      - label: Republic of Korea Army
+        details: 8th Division, K21 IFV Gunner, January 2024 - July 2025
 
     # The template only supports flat highlights, so each CV sub-bullet is
     # merged onto its parent label. Bolding follows the CV.

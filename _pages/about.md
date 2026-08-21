@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Research Intern, TNET lab | Computer Science and Engineering, <a href="https://cse.snu.ac.kr/en">Seoul National University</a>
+subtitle: Research Intern, TNET lab · Computer Science and Engineering, <a href="https://cse.snu.ac.kr/en">Seoul National University</a>
 
 profile:
   align: right

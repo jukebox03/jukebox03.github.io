@@ -6,7 +6,7 @@ importance: 1
 category: research
 ---
 
-Research Intern | TNET lab | DPUmesh Project | December 2025 – Present
+Research Intern · TNET lab · DPUmesh Project · December 2025 – Present
 
 - **DPU-Accelerated Service Mesh:**
   - Researching and optimizing service mesh architectures using Data Processing Units (DPU) to reduce CPU overhead.

@@ -25,6 +25,21 @@ Build locally with a plain `bundle exec jekyll build` — never pass `--baseurl`
 
 Upstream's demo pages (people, teaching, bookshelf, submenus, plugins, blog) and the demo `_posts`, `_teachings`, `_books`, and bibliography entries were **deleted**, not hidden. Restore any of them from git history if wanted.
 
+## Never use `|` as a separator in Markdown body text
+
+`_config.yml` sets `kramdown.input: GFM`, and a body line containing pipes is parsed as a **table**. `Research Intern | TNET lab | December 2025 - Present` silently became a four-column table with a rule above it — no error, just a wrecked layout. The site uses `·` for these separator lines instead.
+
+Pipes are safe in places that are not parsed as Markdown blocks: page front matter (`subtitle:` renders inline) and `_data/cv.yml`'s `details:` field, which the template prints raw. They are unsafe in `_projects/*.md` bodies, `_pages/*.md` bodies, and any `cv.yml` field the template passes through `markdownify` — `highlights` and `bullet`.
+
+## A CV section entry is either a `bullet` or a `label`/`details` pair
+
+For a section name the templates do not special-case, `render.liquid` falls through to a generic branch that renders exactly two shapes:
+
+- `bullet` → `<ul><li>` — the list marker shows as a stray dot next to the entry, and the text goes through `markdownify`
+- `label` + `details` → `<div><strong>label:</strong> details</div>` — no marker, no Markdown processing
+
+Prefer `label`/`details` for one-line entries. `Military Service` and `Additional Interests` both use it.
+
 ## `_data/cv.yml` renders through gem templates that ignore some fields
 
 The `/cv/` page is rendered by `al_folio_cv`'s Liquid templates, not by RenderCV. They accept the RenderCV schema but do not use all of it, and they drop what they do not use without warning:
