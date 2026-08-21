@@ -25,6 +25,18 @@ Build locally with a plain `bundle exec jekyll build` — never pass `--baseurl`
 
 Upstream's demo pages (people, teaching, bookshelf, submenus, plugins, blog) and the demo `_posts`, `_teachings`, `_books`, and bibliography entries were **deleted**, not hidden. Restore any of them from git history if wanted.
 
+## `_data/cv.yml` renders through gem templates that ignore some fields
+
+The `/cv/` page is rendered by `al_folio_cv`'s Liquid templates, not by RenderCV. They accept the RenderCV schema but do not use all of it, and they drop what they do not use without warning:
+
+- **`score` is never rendered.** GPA has to go in `highlights`, which are markdownified, so `"**GPA:** 3.95/4.30"` works.
+- **`location` sits in a `col-md-2` gutter** roughly 125px wide. Anything longer overlaps the entry title in the next column. Keep it to about "Seoul, Korea"; "Seoul, Republic of Korea" already touches, and "Seoul National University" visibly overlapped.
+- **The Languages template renders `<strong>{name}:</strong> {summary}`.** An entry without `summary` shows a dangling colon. This CV has no fluency ratings, so languages live in `Interests` instead — which also matches how the CV groups them.
+- **A start/end pair inside one year renders "2023 - 2023".** Use a single `date:` for a one-year badge and put the month range in `summary`.
+- **Only `Education` is date-sorted** (`al_cv_sort_by_date` in `render.liquid`). Every other section renders in YAML order, so `_data/cv.yml` must already be in the order you want.
+
+Verify CV changes by looking at the built page, not just the YAML.
+
 ## The projects page filters by category
 
 `site.enable_project_categories` is **on by gem default** — it is not in `_config.yml`. When `_pages/projects.md` also carries `display_categories`, the page renders one section per listed category and shows only projects whose `category:` matches. A mismatch renders empty category headings and no cards, with no error.

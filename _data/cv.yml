@@ -1,6 +1,6 @@
 cv:
   name: Junseop Byun
-  label: Research Intern, TNET Lab
+  label: Research Intern, TNET lab
   email: jukebox@snu.ac.kr
   location: Seoul, Republic of Korea
   image: ""
@@ -16,52 +16,58 @@ cv:
       username: jukebox03
 
   sections:
+    # Template notes: `score` is never rendered (GPA goes in highlights), and
+    # `location` sits in a ~125px gutter that does not wrap. See AGENTS.md.
     Education:
       - institution: Seoul National University (SNU)
-        location: Seoul, Republic of Korea
+        location: Seoul, Korea
         url: https://cse.snu.ac.kr/en
         area: Computer Science and Engineering
         studyType: B.S.
         start_date: 2022-03
         end_date: 2027-08
-        score: "GPA: 3.95/4.30"
-        courses: "Computer Network, System Programming, Computer Architecture, Quantum Computing, Theoretical Physics"
         highlights:
           - "March 2022 - August 2027 (Expected)"
-          - "Interests: High-Performance Networking, System Programming"
+          - "**GPA:** 3.95/4.30"
+          - "**Relevant Coursework:** Computer Network, System Programming, Computer Architecture, Quantum Computing, Theoretical Physics"
+          - "**Interests:** High-Performance Networking, System Programming"
 
       - institution: Seoul Science High School (SSHS)
-        location: Seoul, Republic of Korea
+        location: Seoul, Korea
         start_date: 2019-03
         end_date: 2022-02
-        score: "GPA: 4.18/4.30"
+        highlights:
+          - "March 2019 - February 2022"
+          - "**GPA:** 4.18/4.30"
 
+    # The template only supports flat highlights, so each CV sub-bullet is
+    # merged onto its parent label. Bolding follows the CV.
     Experience:
       - company: TNET lab
         position: Research Intern
-        location: Seoul National University
+        location: Seoul, Korea
         start_date: 2025-12
         end_date: present
         summary: "DPUmesh Project"
         highlights:
           - "**DPU-Accelerated Service Mesh:** Researching and optimizing service mesh architectures using Data Processing Units (DPU) to reduce CPU overhead."
-          - "**Transparent Framework Integration:** Integrated the DPUmesh architecture directly into the gRPC framework, enabling existing applications to leverage the new service mesh with zero modifications to user code."
+          - "Linkerd Offload: Running the Linkerd data plane directly on the BlueField-3 DPU, so sidecar proxying executes off the host CPU."
+          - "Transparent Framework Integration: Integrated the DPUmesh architecture directly into the gRPC framework, enabling existing applications to leverage the new service mesh with zero modifications to user code."
           - "**Sidecar Benchmarking & System Debugging:** Benchmarked proxy overhead via DeathStarBench and resolved severe Consul registry leaks causing CPU and connection stalls."
 
+    # A single `date` renders one year; a start/end pair in the same year renders "2023 - 2023".
     Projects:
       - name: SNUPL2 Compiler
-        summary: Developer
-        start_date: 2023-09
-        end_date: 2023-12
+        summary: Developer | September 2023 - December 2023
+        date: 2023
         highlights:
           - Developed a full-stack compiler for SNUPL/2, a custom educational programming language, completely from scratch using C.
           - Managed the end-to-end compilation pipeline, including lexical analysis, parsing, Abstract Syntax Tree (AST) construction, and semantic analysis.
           - Implemented the compiler backend to generate x86-64 assembly code, directly handling low-level register allocation.
 
       - name: MomenTag
-        summary: Full-Stack Developer
-        start_date: 2025-09
-        end_date: 2025-12
+        summary: Full-Stack Developer | September 2025 - December 2025
+        date: 2025
         highlights:
           - Built a tag-based photo management application from scratch.
           - Designed and integrated a RESTful backend using Django with a modern Android frontend using Jetpack Compose.
@@ -78,16 +84,17 @@ cv:
         keywords: "C/C++, Python, Java, OCaml, Go, SQL"
       - name: Systems & Networking
         icon: fa-solid fa-network-wired
-        keywords: "Linux System Programming, k8s, Service Mesh (Istio, Envoy), DPU (BlueField-3), DMA"
+        keywords: "Linux System Programming, k8s, Service Mesh (Istio, Envoy, Linkerd), DPU (BlueField-3), DMA"
       - name: Tools & Frameworks
         icon: fa-solid fa-screwdriver-wrench
         keywords: "DOCA, Git, Qiskit, Django, Jetpack Compose"
 
-    Languages:
-      - name: Korean
-      - name: English
-
+    # The CV groups these two together under ADDITIONAL INTERESTS. A top-level
+    # Languages section would also render "Korean:" with nothing after the colon.
     Interests:
+      - name: Languages
+        icon: fa-solid fa-language
+        keywords: "Korean, English"
       - name: Physics Studies
         icon: fa-solid fa-atom
         keywords: "Studied Classical Mechanics, Electrodynamics, and Quantum Information. Completed graduate-level coursework in Quantum Mechanics."
