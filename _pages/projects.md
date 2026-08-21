@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: DPU-accelerated service mesh research, a custom x86-64 compiler, and full-stack application development.
 nav: true
-nav_order: 1
+nav_order: 2
 horizontal: false
 ---
 
