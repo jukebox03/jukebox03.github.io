@@ -1,15 +1,14 @@
 cv:
   name: Junseop Byun
-  label: Research Intern, TNET lab
+  label: Research Intern, TNET Lab
   email: jukebox@snu.ac.kr
-  location: Seoul, Republic of Korea
+  location: Seoul, South Korea
   image: ""
   summary: >-
-    Computer Science student focusing on systems programming and network infrastructure.
-    Have gained practical understanding by contributing to DPU-accelerated service mesh
-    research and building a custom x86-64 compiler. Motivated by the challenge of solving
-    low-level hardware-software bottlenecks and further expanding my knowledge in
-    distributed systems.
+    Computer Science student focusing on computer systems and network infrastructure,
+    with hands-on experience contributing to DPU-accelerated service mesh research and
+    building a custom x86-64 compiler. Motivated by low-level hardware-software
+    bottlenecks, and interested in distributed systems.
 
   social_networks:
     - network: GitHub
@@ -20,7 +19,7 @@ cv:
     # `location` sits in a ~125px gutter that does not wrap. See AGENTS.md.
     Education:
       - institution: Seoul National University (SNU)
-        location: Seoul, Korea
+        location: Seoul, South Korea
         url: https://cse.snu.ac.kr/en
         area: Computer Science and Engineering
         studyType: B.S.
@@ -29,10 +28,10 @@ cv:
         highlights:
           - "**GPA:** 3.95/4.30 (3.83/4.00)"
           - "**Relevant Coursework:** Computer Network, System Programming, Computer Architecture, Quantum Computing, Theoretical Physics"
-          - "**Interests:** High-Performance Networking, System Programming"
+          - "**Interests:** High-Performance Networking, Computer Systems"
 
       - institution: Seoul Science High School (SSHS)
-        location: Seoul, Korea
+        location: Seoul, South Korea
         start_date: 2019-03
         end_date: 2022-02
         highlights:
@@ -40,21 +39,21 @@ cv:
 
     Military Service:
       - label: Republic of Korea Army
-        details: 8th Division, K21 IFV Gunner, January 2024 - July 2025
+        details: 8th Division, K21 IFV Gunner, Jan. 2024 – Jul. 2025
 
     # The template only supports flat highlights, so each CV sub-bullet is
     # merged onto its parent label. Bolding follows the CV.
     Experience:
-      - company: TNET lab
+      - company: TNET Lab
         position: Research Intern
-        location: Seoul, Korea
+        location: Seoul, South Korea
         start_date: 2025-12
         end_date: present
-        summary: "DPUmesh Project"
+        summary: "DPUmesh Project · Advised by Prof. KyoungSoo Park"
         highlights:
           - "**DPU-Accelerated Service Mesh:** Researching and optimizing service mesh architectures using Data Processing Units (DPU) to reduce CPU overhead."
-          - "Linkerd Offload: Running the Linkerd data plane directly on the BlueField-3 DPU, so sidecar proxying executes off the host CPU."
-          - "Transparent Framework Integration: Integrated the DPUmesh architecture directly into the gRPC framework, enabling existing applications to leverage the new service mesh with zero modifications to user code."
+          - "Linkerd Offload: Running the Linkerd data plane directly on the BlueField-3 DPU, so sidecar proxying runs on the DPU instead of the host CPU."
+          - "Transparent Framework Integration: Integrated the DPUmesh architecture directly into the gRPC framework, enabling existing applications to leverage the new service mesh with minimal modifications to user code."
           - "**Sidecar Benchmarking & System Debugging:** Benchmarked proxy overhead via DeathStarBench and resolved severe Consul registry leaks causing CPU and connection stalls."
 
     # A single `date` renders one year; a start/end pair in the same year renders "2023 - 2023".
@@ -63,16 +62,16 @@ cv:
         summary: Developer
         date: 2023
         highlights:
-          - Developed a full-stack compiler for SNUPL/2, a custom educational programming language, completely from scratch using C.
-          - Managed the end-to-end compilation pipeline, including lexical analysis, parsing, Abstract Syntax Tree (AST) construction, and semantic analysis.
+          - Developed an end-to-end compiler for SNUPL/2, a custom educational programming language, entirely in C.
+          - Implemented the full compilation pipeline, including lexical analysis, parsing, Abstract Syntax Tree (AST) construction, and semantic analysis.
           - Implemented the compiler backend to generate x86-64 assembly code, directly handling low-level register allocation.
 
       - name: MomenTag
         summary: Full-Stack Developer
         date: 2025
         highlights:
-          - Built a tag-based photo management application from scratch.
-          - Designed and integrated a RESTful backend using Django with a modern Android frontend using Jetpack Compose.
+          - Built a tag-based photo management application.
+          - Designed a RESTful Django backend and integrated it with an Android frontend built in Jetpack Compose.
 
     Awards:
       - title: Second prize - Graduation Research Paper Presentation Contest (Physics, SSHS)
