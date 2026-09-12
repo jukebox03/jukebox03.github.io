@@ -27,8 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Computer Science student focusing on computer systems and network infrastructure, with hands-on experience contributing to DPU-accelerated service mesh research and building a custom x86-64 compiler. Motivated by low-level hardware-software bottlenecks, and interested in distributed systems.
+I'm a Computer Science student at Seoul National University, focusing on computer systems and network infrastructure. Currently, I'm a Research Intern at the TNET Lab under Prof. KyoungSoo Park, working on DPUmesh, a DPU-accelerated service mesh. I've also built a custom x86-64 compiler.
 
-Currently a Research Intern at the TNET Lab, Seoul National University, working on the DPUmesh project under Prof. KyoungSoo Park. My interests are high-performance networking and computer systems.
+I'm motivated by low-level hardware-software bottlenecks and interested in distributed systems.
 
-See [projects](/projects/) for what I have been building, or my [CV](/cv/) for the full record.
+See my [projects](/projects/) for what I've been building, or my [CV](/cv/) for more details.

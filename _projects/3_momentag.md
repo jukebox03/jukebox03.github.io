@@ -3,7 +3,7 @@ layout: page
 title: MomenTag
 description: A tag-based photo management application
 importance: 3
-category: systems
+category: applications
 ---
 
 Full-Stack Developer · Sep. 2025 – Dec. 2025
